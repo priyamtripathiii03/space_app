@@ -1,4 +1,6 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'dart:math' as math;
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shimmer/shimmer.dart';
@@ -76,8 +78,10 @@ class _SpaceExplorerScreenState extends State<SpaceExplorerScreen> {
                                 name: planets[index]['name'],
                                 description: planets[index]['desc'],
                                 imagePath: planets[index]['image'],
+                              ).animate().flipV(
+                                duration: 2000.ms,
                               ),
-                            ),
+                            )
                           );
                         },
                         child: PlanetCard(
