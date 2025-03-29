@@ -7,8 +7,20 @@ class PlanetDetailScreen extends StatelessWidget {
   final String name;
   final String description;
   final String imagePath;
+  final String type;
+  final String composition;
+  final int diameter;
+  final double mass;
 
-  PlanetDetailScreen({required this.name, required this.description, required this.imagePath});
+  PlanetDetailScreen({
+    required this.name,
+    required this.description,
+    required this.imagePath,
+    required this.type,
+    required this.composition,
+    required this.diameter,
+    required this.mass,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -31,172 +43,177 @@ class PlanetDetailScreen extends StatelessWidget {
           onTap: () {
             Navigator.of(context).pop();
           },
-          child: Icon(
-            Icons.arrow_back,
-            color: Colors.white,
-          ),
+          child: Icon(Icons.arrow_back, color: Colors.white),
         ),
       ),
       body: Stack(
         children: [
-          StarBackground(),
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Hero(
-                  tag: name,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(20),
-                    child: Image.asset(
-                      imagePath,
-                      width: 280,
-                      height: 280,
-                      fit: BoxFit.cover,
+          // Background Image Container
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/back.jpg'),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          // Main Content
+          SingleChildScrollView(  // Wrap the body with SingleChildScrollView to handle overflow
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // Hero Image
+                  Hero(
+                    tag: name,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20),
+                      child: Image.asset(
+                        imagePath,
+                        width: 280,
+                        height: 280,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(height: 20),
-                Text(
-                  name,
-                  style: GoogleFonts.orbitron(
-                    fontSize: 28,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                    shadows: [
-                      Shadow(blurRadius: 15, color: Colors.blue, offset: Offset(2, 2))
-                    ],
-                  ),
-                ),
-                SizedBox(height: 10),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                  child: Text(
-                    description,
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.white70,
-                      height: 1.5,
+                  SizedBox(height: 20),
+                  // Planet Name
+                  Text(
+                    name,
+                    style: GoogleFonts.orbitron(
+                      fontSize: 35,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      shadows: [
+                        Shadow(
+                          blurRadius: 15,
+                          color: Colors.blue,
+                          offset: Offset(2, 2),
+                        ),
+                      ],
                     ),
-                    textAlign: TextAlign.center,
                   ),
-                ),
-              ],
+                  SizedBox(height: 10),
+                  // Planet Details Card
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: Card(
+                      color: Colors.black.withOpacity(0.7),
+                      elevation: 10,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(height: 20), // Add some space
+                            Text(
+                              "Type: ",
+                              style: GoogleFonts.orbitron(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              type,
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.white70,
+                                height: 1.5,
+                              ),
+                              textAlign: TextAlign.left,
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "Diameter: ",
+                              style: GoogleFonts.orbitron(
+                                fontSize: 22,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              diameter.toString(),
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.white70,
+                                height: 1.5,
+                              ),
+                              textAlign: TextAlign.left,
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "Mass: ",
+                              style: GoogleFonts.orbitron(
+                                fontSize: 22,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              mass.toString(),
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.white70,
+                                height: 1.5,
+                              ),
+                              textAlign: TextAlign.left,
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "Composition: ",
+                              style: GoogleFonts.orbitron(
+                                fontSize: 22,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              composition,
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.white70,
+                                height: 1.5,
+                              ),
+                              textAlign: TextAlign.left,
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              "Description",
+                              style: GoogleFonts.orbitron(
+                                fontSize: 22,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                            SizedBox(height: 10),
+                            Text(
+                              description,
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: Colors.white70,
+                                height: 1.5,
+                              ),
+                              textAlign: TextAlign.left,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
       ),
     );
   }
-}
-
-class PlanetCard extends StatelessWidget {
-  final String name;
-  final String description;
-  final String imagePath;
-  final Color color;
-
-  PlanetCard({required this.name, required this.description, required this.imagePath, required this.color});
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => PlanetDetailScreen(
-              name: name,
-              description: description,
-              imagePath: imagePath,
-            ),
-          ),
-        );
-      },
-      child: Card(
-        elevation: 10,
-        color: color.withOpacity(0.5),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Expanded(
-              child: Hero(
-                tag: name,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Image.asset(
-                    imagePath,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-            ),
-            SizedBox(height: 10),
-            Shimmer.fromColors(
-              baseColor: Colors.white,
-              highlightColor: Colors.blueAccent,
-              child: Text(
-                name,
-                style: GoogleFonts.orbitron(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                  shadows: [
-                    Shadow(blurRadius: 10, color: Colors.white, offset: Offset(0, 0))
-                  ],
-                ),
-              ),
-            ),
-            SizedBox(height: 5),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10.0),
-              child: Text(
-                description,
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.white70,
-                  height: 1.4,
-                ),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            SizedBox(height: 10),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class StarBackground extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return CustomPaint(
-      painter: StarPainter(),
-      size: Size.infinite,
-    );
-  }
-}
-
-class StarPainter extends CustomPainter {
-  @override
-  void paint(Canvas canvas, Size size) {
-    final random = math.Random();
-    final paint = Paint()..color = Colors.white.withOpacity(0.7);
-
-    for (int i = 0; i < 250; i++) {
-      double radius = random.nextDouble() * 2 + 1;
-      canvas.drawCircle(
-        Offset(random.nextDouble() * size.width, random.nextDouble() * size.height),
-        radius,
-        paint,
-      );
-    }
-  }
-
-  @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
 }
