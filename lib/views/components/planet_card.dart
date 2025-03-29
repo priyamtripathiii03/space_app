@@ -14,7 +14,7 @@ class PlanetCard extends StatelessWidget {
   final int diameter;
   final double mass;
 
-  PlanetCard({required this.name, required this.description, required this.imagePath, required this.color,required this.type, required this.composition, required this.diameter, required this.mass});
+  const PlanetCard({super.key, required this.name, required this.description, required this.imagePath, required this.color,required this.type, required this.composition, required this.diameter, required this.mass});
 
   @override
   Widget build(BuildContext context) {

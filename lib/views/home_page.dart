@@ -1,7 +1,5 @@
-import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'dart:math' as math;
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shimmer/shimmer.dart';
 
@@ -25,7 +23,7 @@ class _SpaceExplorerScreenState extends State<SpaceExplorerScreen> {
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage('assets/back.jpg'), // Your background image
+                image: AssetImage('assets/back.jpg'),
                 fit: BoxFit.cover,
               ),
             ),
@@ -33,7 +31,6 @@ class _SpaceExplorerScreenState extends State<SpaceExplorerScreen> {
           SafeArea(
             child: Column(
               children: [
-                // App bar section with larger icons and text
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20),
                   child: Row(
@@ -53,7 +50,6 @@ class _SpaceExplorerScreenState extends State<SpaceExplorerScreen> {
                     ],
                   ),
                 ),
-                // Search bar with larger padding and font size
                 Container(
                   decoration: BoxDecoration(
                     color: Colors.white.withOpacity(0.1),
@@ -71,7 +67,7 @@ class _SpaceExplorerScreenState extends State<SpaceExplorerScreen> {
                     style: TextStyle(color: Colors.white, fontSize: 18),
                   ),
                 ),
-                // Expanded GridView with larger items
+
                 Expanded(
                   child: GridView.builder(
                     padding: EdgeInsets.all(20),
@@ -79,7 +75,7 @@ class _SpaceExplorerScreenState extends State<SpaceExplorerScreen> {
                       crossAxisCount: 2,
                       crossAxisSpacing: 20,
                       mainAxisSpacing: 20,
-                      childAspectRatio: 0.85, // Adjusted to make items bigger
+                      childAspectRatio: 0.85,
                     ),
                     itemCount: planets.length,
                     itemBuilder: (context, index) {
