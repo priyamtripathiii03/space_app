@@ -91,6 +91,15 @@ The **Space Explorer App** is your ultimate guide to the universe, offering a we
 <p>
   <img src="https://github.com/user-attachments/assets/03667f61-425b-45d6-8964-4773d4d83e72"height="35%" width="22%">
    <img src="https://github.com/user-attachments/assets/57b6b0c7-85af-4c0e-b80a-60153dc1005f"height="35%" width="22%">
-  
+     <img src="https://github.com/user-attachments/assets/8ba33560-a061-4c75-a938-cb182726c810"height="35%" width="22%">
+     <img src="https://github.com/user-attachments/assets/a6f39715-f557-4eb8-b416-e5f1994ae06e"height="35%" width="22%">
+     <img src="https://github.com/user-attachments/assets/c13cd2de-cfb5-47ab-b835-27a18afb7213"height="35%" width="22%">
+    <img src="https://github.com/user-attachments/assets/86204cb3-7086-4d30-98a7-e1b4591c1674"height="35%" width="22%">
+     <img src="https://github.com/user-attachments/assets/3e86c5b6-14ad-4d2b-bc48-c12665804268"height="35%" width="22%">
+            <img src="https://github.com/user-attachments/assets/26cc96f8-b1bb-434f-8db4-fc58e4e4a609"height="35%" width="22%">
+               <img src="https://github.com/user-attachments/assets/4bfe8d99-042d-4028-b1a3-710541c22d52"height="35%" width="22%">
+                  <img src="https://github.com/user-attachments/assets/27b391cc-47a9-4bb5-a2a7-24bb4d9756ba"height="35%" width="22%">
+                   <img src="https://github.com/user-attachments/assets/bad35493-3660-4e88-ae91-08255921c921"height="35%" width="22%">
+                    <img src="https://github.com/user-attachments/assets/6a46c63b-14ff-4fff-b8ed-e70c416a6207"height="35%" width="22%">
     </p>
 
