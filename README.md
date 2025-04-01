@@ -89,6 +89,7 @@ The **Space Explorer App** is your ultimate guide to the universe, offering a we
 
 
 <p>
+    <img src="https://github.com/user-attachments/assets/dd38a647-1b89-4d5c-a0b4-e5096796370f"height="35%" width="22%">
   <img src="https://github.com/user-attachments/assets/03667f61-425b-45d6-8964-4773d4d83e72"height="35%" width="22%">
    <img src="https://github.com/user-attachments/assets/57b6b0c7-85af-4c0e-b80a-60153dc1005f"height="35%" width="22%">
      <img src="https://github.com/user-attachments/assets/8ba33560-a061-4c75-a938-cb182726c810"height="35%" width="22%">
